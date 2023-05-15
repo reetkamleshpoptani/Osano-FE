@@ -1,0 +1,80 @@
+.osano-root{
+    background-color:rgba(0,0,0,0)
+}
+.osano-spinner{
+    border-color:rgba(12,108,222, 0.2) rgba(12,108,222, 0.2) rgba(12,108,222, 0.2) rgb(12,108,222)
+}
+.osano-header{
+    background-color:#0c6cde;
+    color:#fff
+}
+.osano-button{
+    background-color:#0c6cde;
+    border-color:#0c6cde;
+    color:#fff
+}
+.osano-button:focus{
+    background-color:#0057c9
+}
+.osano-button:hover{
+    background-color:#1676e8
+}
+.osano-button--disabled,.osano-button--disabled:focus,.osano-button--disabled:hover{
+    cursor:default;
+    background-color:#d6d6d6;
+    border-color:#d6d6d6;
+    color:#fff
+}
+.osano-input{
+    background-color:transparent;
+    color:rgb(0,0,0)
+}
+.osano-label{
+    color:rgb(0,0,0)
+}
+.osano-error{
+    color:rgb(192,0,0)
+}
+.osano-default-content,.osano-helper-text,.osano-message--type_instructions,.osano-preview__info{
+    color:rgb(0,0,0)
+}
+.osano-body--style_error{
+    color:rgb(192,0,0)
+}
+.osano-fieldset,.osano-input--type_checkbox+.osano-label::before{
+    border-color:rgba(0,0,0,.2)
+}
+.osano-fieldset__input{
+    border-color:transparent transparent rgb(12,108,222) transparent
+}
+.osano-input--type_checkbox:checked+.osano-label::before{
+    background-color:#0c6cde
+}
+.osano-input--type_checkbox:checked+.osano-label::after{
+    border-color:#fff
+}
+.osano-field--focused .osano-field__fieldset,.osano-field--focused .osano-input--type_checkbox+.osano-label::before{
+    border-color:rgba(12,108,222,1)
+}
+.osano-field--focused .osano-field__fieldset .osano-fieldset__input{
+    border-bottom-color:#0c6cde
+}
+.osano-field--error .osano-field__fieldset{
+    border-color:rgb(192,0,0)
+}
+.osano-field--error .osano-field__fieldset .osano-fieldset__input{
+    border-bottom-color:rgb(192,0,0)
+}
+.osano-field--error .osano-label{
+    color:rgb(192,0,0)
+}
+.osano-field--required .osano-fieldset .osano-label::before{
+    color:rgb(192,0,0)
+}
+.osano-fieldset__button{
+    border-color:#0c6cde;
+    color:#0c6cde
+}
+.osano-message--type_error .osano-message__body{
+    color:rgb(192,0,0)
+}
