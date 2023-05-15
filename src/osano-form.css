@@ -1,21 +1,16 @@
 .osano-root {
     /* font-family: Arial,Helvetica,sans-serif; */
     /* font-size: 16px; */
-    margin: 0;
-    min-height: 12em;
-    padding: 0;
     position: relative;
     text-align: center;
     font-family: CircularStd, Helvetica, sans-serif !important;
     line-height: 1.375;
     color: rgba(50, 50, 50) !important;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     font-size: 18px !important;
     font-weight: 400 !important;
     letter-spacing: 0 !important;
 }
 
-.osano-form .osano-field {
+.osano-root .osano-form .osano-field {
     margin: 0 0 1.5rem !important;
 } 
