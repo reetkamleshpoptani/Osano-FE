@@ -1,80 +1,803 @@
-.osano-root{
-    background-color:rgba(0,0,0,0)
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video {
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline
 }
-.osano-spinner{
-    border-color:rgba(12,108,222, 0.2) rgba(12,108,222, 0.2) rgba(12,108,222, 0.2) rgb(12,108,222)
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    display: block
 }
-.osano-header{
-    background-color:#0c6cde;
-    color:#fff
+
+body {
+    line-height: 1
 }
-.osano-button{
-    background-color:#0c6cde;
-    border-color:#0c6cde;
-    color:#fff
+
+ol,ul {
+    list-style: none
 }
-.osano-button:focus{
-    background-color:#0057c9
+
+blockquote,q {
+    quotes: none
 }
-.osano-button:hover{
-    background-color:#1676e8
+
+blockquote:after,blockquote:before,q:after,q:before {
+    content: "";
+    content: none
 }
-.osano-button--disabled,.osano-button--disabled:focus,.osano-button--disabled:hover{
-    cursor:default;
-    background-color:#d6d6d6;
-    border-color:#d6d6d6;
-    color:#fff
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
 }
-.osano-input{
-    background-color:transparent;
-    color:rgb(0,0,0)
+
+h1 {
+    font-size: 35px;
+    font-weight: 900
 }
-.osano-label{
-    color:rgb(0,0,0)
+
+h2 {
+    font-size: 29px;
+    font-weight: 700
 }
-.osano-error{
-    color:rgb(192,0,0)
+
+h3 {
+    font-size: 24px
 }
-.osano-default-content,.osano-helper-text,.osano-message--type_instructions,.osano-preview__info{
-    color:rgb(0,0,0)
+
+h3,h4 {
+    font-weight: 600
 }
-.osano-body--style_error{
-    color:rgb(192,0,0)
+
+h4 {
+    font-size: 20px
 }
-.osano-fieldset,.osano-input--type_checkbox+.osano-label::before{
-    border-color:rgba(0,0,0,.2)
+
+h5 {
+    font-size: 16px
 }
-.osano-fieldset__input{
-    border-color:transparent transparent rgb(12,108,222) transparent
+
+h5,h6 {
+    font-weight: 400
 }
-.osano-input--type_checkbox:checked+.osano-label::before{
-    background-color:#0c6cde
+
+h6 {
+    font-size: 14px
 }
-.osano-input--type_checkbox:checked+.osano-label::after{
-    border-color:#fff
+
+input,select,textarea {
+    filter: none
 }
-.osano-field--focused .osano-field__fieldset,.osano-field--focused .osano-input--type_checkbox+.osano-label::before{
-    border-color:rgba(12,108,222,1)
+
+input::-moz-placeholder,select::-moz-placeholder,textarea::-moz-placeholder {
+    color: #333;
+    font-size: 1em!important;
+    opacity: 1
 }
-.osano-field--focused .osano-field__fieldset .osano-fieldset__input{
-    border-bottom-color:#0c6cde
+
+input::placeholder,select::placeholder,textarea::placeholder {
+    color: #333;
+    font-size: 1em!important;
+    opacity: 1
 }
-.osano-field--error .osano-field__fieldset{
-    border-color:rgb(192,0,0)
+
+input:-moz-placeholder,input:-ms-input-placeholder,input::-moz-placeholder,input::-webkit-input-placeholder,select:-moz-placeholder,select:-ms-input-placeholder,select::-moz-placeholder,select::-webkit-input-placeholder,textarea:-moz-placeholder,textarea:-ms-input-placeholder,textarea::-moz-placeholder,textarea::-webkit-input-placeholder {
+    font-size: 1em!important
 }
-.osano-field--error .osano-field__fieldset .osano-fieldset__input{
-    border-bottom-color:rgb(192,0,0)
+
+input:-webkit-autofill,input:-webkit-autofill:focus,input:-webkit-autofill:hover,select:-webkit-autofill,select:-webkit-autofill:focus,select:-webkit-autofill:hover,textarea:-webkit-autofill,textarea:-webkit-autofill:focus,textarea:-webkit-autofill:hover {
+    animation-fill-mode: both!important;
+    animation-name: autofill!important
 }
-.osano-field--error .osano-label{
-    color:rgb(192,0,0)
+
+@keyframes autofill {
+    to {
+        background: transparent;
+        color: #666
+    }
 }
-.osano-field--required .osano-fieldset .osano-label::before{
-    color:rgb(192,0,0)
+
+* {
+    box-sizing: border-box
 }
-.osano-fieldset__button{
-    border-color:#0c6cde;
-    color:#0c6cde
+
+body {
+    margin: 0;
+    overflow-x: hidden
 }
-.osano-message--type_error .osano-message__body{
-    color:rgb(192,0,0)
+
+.osano-root {
+    /* font-family: Arial,Helvetica,sans-serif; */
+    /* font-size: 16px; */
+    margin: 0;
+    min-height: 12em;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    font-family: CircularStd, Helvetica, sans-serif;
+    line-height: 1.375;
+    color: rgba(50, 50, 50);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+.osano-label {
+    color: #222;
+    display: inline-block
+}
+
+.osano-input {
+    appearance: textfield;
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+    background-color: transparent;
+    box-sizing: border-box;
+    color: #222;
+    resize: none
+}
+
+.osano-input:-moz-focusring,.osano-input::-moz-focus-inner {
+    background-image: none!important;
+    border-color: transparent;
+    text-shadow: 0 0 0 #000!important
+}
+
+.osano-error {
+    color: #c00000;
+    flex: 1 0 100%;
+    font-size: .75em;
+    margin: .75em 0 0
+}
+
+.osano-error:empty {
+    display: none;
+    margin: 0
+}
+
+.osano-helper-text {
+    color: #666;
+    flex: 1 0 100%;
+    font-size: .75em;
+    margin: .75em 0 0;
+    word-break: break-word
+}
+
+.osano-helper-text:empty {
+    display: none;
+    margin: 0
+}
+
+.osano-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0 auto;
+    max-width: 480px;
+    padding: 1em;
+    position: relative;
+    text-align: center
+}
+
+.osano-message__headline {
+    font-size: 1.75em;
+    font-weight: 900;
+    margin-bottom: .5em
+}
+
+.osano-message__body {
+    font-size: 1em;
+    margin-bottom: .5em
+}
+
+.osano-message__footer {
+    color: #666;
+    font-size: .8em;
+    margin-top: 1.75em
+}
+
+.osano-message--type_error .osano-message__body {
+    color: #c00000;
+    white-space: pre-line
+}
+
+.osano-message--type_instructions .osano-body {
+    text-align: left;
+    white-space: pre-line
+}
+
+.osano-footer {
+    position: relative
+}
+
+.osano-powered-by {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial,Helvetica,sans-serif;
+    justify-content: center;
+    margin: 1em 0 2em
+}
+
+.osano-powered-by__headline {
+    font-size: .625em;
+    text-transform: uppercase
+}
+
+.osano-powered-by__link {
+    text-decoration: none
+}
+
+.osano-logo {
+    height: auto;
+    width: 120px
+}
+
+.osano-logo__svg .filled {
+    fill: #7764fa
+}
+
+.osano-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 768px;
+    padding: 1em;
+    position: relative;
+    text-align: left
+}
+
+.osano-form--submitting:after {
+    background-color: hsla(0,0%,100%,.85);
+    bottom: 0;
+    content: "";
+    left: -1em;
+    position: absolute;
+    right: -1em;
+    top: -1em;
+    z-index: 1
+}
+
+.osano-form--submitting~.osano-spinner {
+    display: block
+}
+
+.osano-button {
+    border-radius: .25em;
+    border-style: solid;
+    border-width: 1px;
+    font-size: .75em;
+    margin: auto;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    min-width: 240px;
+    outline: none;
+    padding: 1em 1.5em;
+    transition-delay: 0ms;
+    transition-duration: .3s;
+    transition-property: background-color;
+    transition-timing-function: ease-in-out
+}
+
+.osano-button:-moz-focusring,.osano-button::-moz-focus-inner {
+    background-image: none!important;
+    border-color: transparent;
+    text-shadow: 0 0 0 #000!important
+}
+
+.osano-button:hover {
+    cursor: pointer
+}
+
+@media(hover: none) {
+    .osano-button:hover {
+        cursor:default
+    }
+}
+
+.osano-input--type_checkbox {
+    font-size: inherit;
+    height: 1px;
+    margin: -1px;
+    opacity: 0;
+    outline: 0;
+    position: absolute;
+    width: 1px
+}
+
+.osano-input--type_checkbox+.osano-label {
+    align-items: center;
+    display: flex;
+    position: relative
+}
+
+.osano-input--type_checkbox+.osano-label:after,.osano-input--type_checkbox+.osano-label:before {
+    box-sizing: border-box;
+    content: "";
+    display: inline-block
+}
+
+.osano-input--type_checkbox+.osano-label:before {
+    border-radius: .125em;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    height: 1.25em;
+    margin: 1px .25em 1px 1px;
+    transition-delay: 0ms;
+    transition-duration: .3s;
+    transition-property: border-color background-color;
+    transition-timing-function: ease-in-out;
+    width: 1.25em
+}
+
+.osano-input--type_checkbox+.osano-label:after {
+    left: 0;
+    position: absolute;
+    top: 0
+}
+
+.osano-dropdown .osano-input--type_checkbox+.osano-label {
+    padding: 1em
+}
+
+.osano-dropdown .osano-input--type_checkbox+.osano-label:after {
+    left: 3px;
+    position: absolute;
+    top: 3px
+}
+
+.osano-input--type_checkbox:checked+.osano-label:before {
+    border: none
+}
+
+.osano-input--type_checkbox:checked+.osano-label:after {
+    border-style: none none solid solid;
+    border-width: .125em;
+    height: .375em;
+    transform: translate(calc(.25em + 1px),calc(.33654em + 1px)) rotate(-45deg);
+    width: .75em
+}
+
+.osano-dropdown .osano-input--type_checkbox:checked+.osano-label:after {
+    transform: translate(calc(.25em + 14px),calc(.33654em + 14px)) rotate(-45deg)
+}
+
+.osano-dropdown .osano-input--type_checkbox:focus+.osano-label {
+    background-color: hsla(0,0%,40%,.2)
+}
+
+.osano-input--type_file {
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.osano-preview {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1em
+}
+
+@media(min-width: 480px) {
+    .osano-preview {
+        flex-direction:row
+    }
+}
+
+.osano-preview__image {
+    align-items: center;
+    border: 1px solid #000;
+    display: flex;
+    flex-basis: 120px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 120px;
+    justify-content: center;
+    margin-right: 1em;
+    overflow: hidden;
+    width: 120px;
+    z-index: 0
+}
+
+@media(min-width: 480px) {
+    .osano-preview__image {
+        flex-basis:160px;
+        height: 160px;
+        width: 160px
+    }
+}
+
+@media(min-width: 768px) {
+    .osano-preview__image {
+        flex-basis:240px;
+        height: 240px;
+        width: 240px
+    }
+}
+
+.osano-preview__image:last-child {
+    flex-grow: 1;
+    margin-right: 0
+}
+
+.osano-preview__info {
+    font-size: .875em
+}
+
+.osano-image__default-content {
+    font-size: .75em;
+    position: relative;
+    z-index: -1
+}
+
+.osano-image--provided .osano-image__default-content {
+    display: none
+}
+
+.osano-info {
+    padding: 1em
+}
+
+.osano-info__body {
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    margin-block-end:1em;margin-block-start:1em}
+
+.osano-input--type_multiselect {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer
+}
+
+.osano-fieldset__input .osano-input--type_multiselect {
+    margin: 0;
+    padding: 0
+}
+
+.osano-input--type_multiselect:-moz-focusring,.osano-input--type_multiselect::-moz-focus-inner {
+    background-image: none!important;
+    border: 0;
+    color: transparent!important;
+    text-shadow: 0 0 0 #000!important
+}
+
+.osano-overselect {
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1
+}
+
+.osano-dropdown {
+    background: #fff;
+    border: 1px solid #dadada;
+    left: -1px;
+    opacity: 0;
+    position: absolute;
+    top: 50px;
+    width: calc(100% + 2px);
+    z-index: -1
+}
+
+.osano-dropdown label {
+    display: block;
+    padding: .2em
+}
+
+.osano-dropdown label:focus,.osano-dropdown label:hover {
+    background-color: hsla(0,0%,40%,.2)
+}
+
+.osano-dropdown--open {
+    opacity: 1;
+    z-index: 99
+}
+
+.osano-input--type_hidden {
+    display: none
+}
+
+.osano-input--type_select {
+    appearance: inherit;
+    -moz-appearance: inherit;
+    -webkit-appearance: inherit;
+    cursor: pointer
+}
+
+.osano-input--type_select:-moz-focusring,.osano-input--type_select::-moz-focus-inner {
+    background-image: none!important;
+    border: 0;
+    color: transparent!important;
+    text-shadow: 0 0 0 #000!important
+}
+
+.osano-field {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 1.5rem;
+    outline: none
+}
+
+.osano-field__fieldset {
+    display: flex
+}
+
+.osano-field--type_datepicker .osano-fieldset__legend:after,.osano-field--type_datepicker .osano-fieldset__legend:before,.osano-field--type_multiselect .osano-fieldset__legend:after,.osano-field--type_multiselect .osano-fieldset__legend:before,.osano-field--type_select .osano-fieldset__legend:after,.osano-field--type_select .osano-fieldset__legend:before {
+    font-size: .75em;
+    letter-spacing: 0;
+    margin: 0;
+    padding: 0 .25em;
+    transition-timing-function: ease-out
+}
+
+.osano-field--type_datepicker .osano-fieldset__legend .osano-label,.osano-field--type_multiselect .osano-fieldset__legend .osano-label,.osano-field--type_select .osano-fieldset__legend .osano-label {
+    font-size: .75em;
+    transform: translate(.6666666667em,-2px)
+}
+
+.osano-field--type_multiselect .osano-field__fieldset:after,.osano-field--type_select .osano-field__fieldset:after {
+    content: "̌";
+    line-height: .5;
+    position: absolute;
+    right: 1em;
+    top: 50%
+}
+
+.osano-field--required .osano-field__fieldset .osano-legend:before {
+    content: "*"
+}
+
+.osano-field--required .osano-field__fieldset .osano-legend .osano-label {
+    vertical-align: middle
+}
+
+.osano-field--required .osano-field__fieldset .osano-legend .osano-label:before {
+    content: "*";
+    margin-right: .25em
+}
+
+.osano-input--valid~.osano-fieldset__legend:after,.osano-input--valid~.osano-fieldset__legend:before {
+    font-size: .75em;
+    letter-spacing: 0;
+    margin: 0;
+    padding: 0 .25em;
+    transition-timing-function: ease-out
+}
+
+.osano-input--valid~.osano-fieldset__legend .osano-label {
+    font-size: .75em;
+    transform: translate(.6666666667em,-2px)
+}
+
+.osano-legend {
+    font-size: 1em
+}
+
+.osano-legend__label {
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    text-overflow: ellipsis;
+    top: -5px;
+    transform: translate(1em,calc(1em + 8px));
+    transition-property: font-size,transform;
+    transition-timing-function: ease-in-out;
+    white-space: nowrap;
+    width: calc(100% - 1.25em + 5px)
+}
+
+.osano-fieldset,.osano-legend__label {
+    transition-delay: 0ms;
+    transition-duration: .3s
+}
+
+.osano-fieldset {
+    -webkit-padding-start: .25em;
+    -webkit-padding-end: .25em;
+    border-style: solid;
+    border-width: 1px;
+    flex: 1 0 100%;
+    margin: 0;
+    padding: 0;
+    padding-inline-end:.25em;padding-inline-start:.25em;position: relative;
+    transition-property: border-color;
+    transition-timing-function: ease-in-out;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.osano-fieldset__legend {
+    -webkit-padding-start: 0;
+    -webkit-padding-end: 0;
+    height: 0;
+    max-height: 0;
+    padding: 0;
+    padding-inline-end:0;padding-inline-start:0;width: auto
+}
+
+.osano-fieldset__legend:after,.osano-fieldset__legend:before {
+    color: transparent;
+    letter-spacing: -1ch;
+    margin: 0 -.5ch;
+    padding: 0;
+    transition-delay: 0ms;
+    transition-duration: .3s;
+    transition-property: font-size,letter-spacing,margin,padding;
+    transition-timing-function: ease-in
+}
+
+.osano-fieldset__legend:after {
+    content: attr(title)
+}
+
+.osano-fieldset__legend--floating:after,.osano-fieldset__legend--floating:before {
+    font-size: .75em;
+    margin: 0;
+    padding: 0 .25em;
+    transition-timing-function: ease-out
+}
+
+.osano-fieldset__legend--floating .osano-label {
+    font-size: .75em;
+    transform: translate(.6666666667em,-2px)
+}
+
+.osano-fieldset__legend--floating:after,.osano-fieldset__legend--floating:before {
+    letter-spacing: 0
+}
+
+.osano-fieldset__input {
+    border-style: solid;
+    border-width: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    margin-left: calc(-.25em - 1px);
+    margin-right: calc(-.25em - 1px);
+    outline: none;
+    padding: 1em;
+    transition-delay: 0ms;
+    transition-duration: .3s;
+    transition-property: margin,border-bottom-width,border-color,margin-bottom;
+    transition-timing-function: ease-in-out;
+    width: calc(100% + .5em + 2px)
+}
+
+.osano-fieldset__input:-moz-placeholder-shown~.osano-fieldset__legend:after,.osano-fieldset__input:-moz-placeholder-shown~.osano-fieldset__legend:before {
+    font-size: .75em;
+    letter-spacing: 0;
+    margin: 0;
+    padding: 0 .25em;
+    transition-timing-function: ease-out
+}
+
+.osano-fieldset__input:focus~.osano-fieldset__legend:after,.osano-fieldset__input:focus~.osano-fieldset__legend:before,.osano-fieldset__input:placeholder-shown~.osano-fieldset__legend:after,.osano-fieldset__input:placeholder-shown~.osano-fieldset__legend:before,.osano-fieldset__input:valid~.osano-fieldset__legend:after,.osano-fieldset__input:valid~.osano-fieldset__legend:before {
+    font-size: .75em;
+    letter-spacing: 0;
+    margin: 0;
+    padding: 0 .25em;
+    transition-timing-function: ease-out
+}
+
+.osano-fieldset__input:-moz-placeholder-shown~.osano-fieldset__legend .osano-label {
+    font-size: .75em;
+    transform: translate(.6666666667em,-2px)
+}
+
+.osano-fieldset__input:focus~.osano-fieldset__legend .osano-label,.osano-fieldset__input:placeholder-shown~.osano-fieldset__legend .osano-label,.osano-fieldset__input:valid~.osano-fieldset__legend .osano-label {
+    font-size: .75em;
+    transform: translate(.6666666667em,-2px)
+}
+
+.osano-fieldset__input:-webkit-autofill:focus~.osano-fieldset__legend:after,.osano-fieldset__input:-webkit-autofill:focus~.osano-fieldset__legend:before,.osano-fieldset__input:-webkit-autofill:hover~.osano-fieldset__legend:after,.osano-fieldset__input:-webkit-autofill:hover~.osano-fieldset__legend:before,.osano-fieldset__input:-webkit-autofill~.osano-fieldset__legend:after,.osano-fieldset__input:-webkit-autofill~.osano-fieldset__legend:before {
+    font-size: .75em;
+    letter-spacing: 0;
+    margin: 0;
+    padding: 0 .25em;
+    transition-timing-function: ease-out
+}
+
+.osano-fieldset__input:autofill:focus~.osano-fieldset__legend:after,.osano-fieldset__input:autofill:focus~.osano-fieldset__legend:before,.osano-fieldset__input:autofill:hover~.osano-fieldset__legend:after,.osano-fieldset__input:autofill:hover~.osano-fieldset__legend:before,.osano-fieldset__input:autofill~.osano-fieldset__legend:after,.osano-fieldset__input:autofill~.osano-fieldset__legend:before {
+    font-size: .75em;
+    letter-spacing: 0;
+    margin: 0;
+    padding: 0 .25em;
+    transition-timing-function: ease-out
+}
+
+.osano-fieldset__input:-webkit-autofill:focus~.osano-fieldset__legend .osano-label,.osano-fieldset__input:-webkit-autofill:hover~.osano-fieldset__legend .osano-label,.osano-fieldset__input:-webkit-autofill~.osano-fieldset__legend .osano-label {
+    font-size: .75em;
+    transform: translate(.6666666667em,-2px)
+}
+
+.osano-fieldset__input:autofill:focus~.osano-fieldset__legend .osano-label,.osano-fieldset__input:autofill:hover~.osano-fieldset__legend .osano-label,.osano-fieldset__input:autofill~.osano-fieldset__legend .osano-label {
+    font-size: .75em;
+    transform: translate(.6666666667em,-2px)
+}
+
+.osano-fieldset__button {
+    margin: 1em auto 1em 1em
+}
+
+.osano-fieldset--required .osano-fieldset__input~.osano-fieldset__legend:before {
+    content: "*"
+}
+
+.osano-fieldset--required .osano-fieldset__input~.osano-fieldset__legend .osano-label {
+    vertical-align: middle
+}
+
+.osano-fieldset--required .osano-fieldset__input~.osano-fieldset__legend .osano-label:before {
+    content: "*";
+    margin-right: .25em
+}
+
+.osano-header {
+    position: relative
+}
+
+.osano-header__title {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 0 auto;
+    max-width: 768px;
+    text-align: left
+}
+
+.osano-header__title:not(:empty) {
+    padding: 1rem
+}
+
+.osano-spinner {
+    border: .5em solid hsla(0,0%,40%,.2);
+    border-left-color: #666;
+    border-radius: 50%;
+    box-sizing: border-box;
+    display: none;
+    height: 6em;
+    left: 50%;
+    margin: 2em auto;
+    text-indent: -99999em;
+    top: 50%;
+    transform: translateZ(0);
+    width: 6em;
+    z-index: 1
+}
+
+.osano-form~.osano-spinner {
+    margin: -3em;
+    position: absolute
+}
+
+.osano-spinner--loading {
+    animation: loading 1.1s linear infinite;
+    display: block
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(1turn)
+    }
 }
