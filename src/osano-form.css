@@ -53,7 +53,7 @@
     transition-timing-function: cubic-bezier(0,0,.2,1);
 }
 
-select {
+.osano-form select {
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
@@ -64,6 +64,6 @@ select {
 }
 
 /* For IE (thanks to @SaiManoj) */
-select::-ms-expand {
+.osano-form select::-ms-expand {
   display: none;
 }
