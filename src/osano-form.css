@@ -36,6 +36,7 @@
     margin-bottom: 1.5rem;
     border-radius: 43px;
     border-width: 2px;
+    min-width: 0px;
     /* font-size: var(--font-size-button); -- check as per calculation */ 
     font-weight: 600;
     padding: 10px 16px;
