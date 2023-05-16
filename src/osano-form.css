@@ -67,3 +67,7 @@
 .osano-form select::-ms-expand {
   display: none;
 }
+
+.osano-field--type_select .osano-field__fieldset:after {
+    content: "";
+}
