@@ -1,3 +1,8 @@
+@font-face {
+  font-family: CircularStd;
+  src: url(./assets/CircularStd/CircularStd-Regular.woff);
+}
+
 .osano-root {
     font-family: CircularStd, Helvetica, sans-serif;
     line-height: 1.375;
