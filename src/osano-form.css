@@ -76,6 +76,7 @@
 .osano-helper-text {
     font-size: 18px;
     font-weight: 400;
+    color: rgb(50, 50, 50);
 }
 
 .osano-fieldset:hover {
